@@ -7,6 +7,79 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Backend**: Built using Java SE's built-in HTTP Server (`com.sun.net.httpserver.HttpServer`) to serve REST APIs and host frontend static files.
 - **Database**: H2 Database Engine (embedded file-based SQL, persistence to `./student_db`), which requires zero setup or server installations.
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
+- ## 🏗️ System Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    FRONTEND LAYER                       │
+│  (HTML5 + CSS3 + Vanilla JavaScript)                    │
+│                                                          │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐  │
+│  │Dashboard │ │ Students │ │Analytics │ │Settings  │  │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────┘  │
+│                                                          │
+│  - Real-time Search & Filters                          │
+│  - Charts.js for Analytics                             │
+│  - Theme Toggle (Dark/Light)                           │
+│  - Form Validations                                     │
+└─────────────────────────────────────────────────────────┘
+                         ↓ REST API
+┌─────────────────────────────────────────────────────────┐
+│                    API LAYER                            │
+│  (Java HttpServer)                                      │
+│                                                          │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  StudentApiHandler (HTTP Request Handler)       │   │
+│  │  - POST /api/students   (CREATE)               │   │
+│  │  - GET /api/students    (READ)                 │   │
+│  │  - PUT /api/students    (UPDATE)               │   │
+│  │  - DELETE /api/students?id=X (DELETE)         │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────┐
+│                  BUSINESS LOGIC LAYER                   │
+│                                                          │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  StudentDAO (Data Access Object)                │   │
+│  │  - addStudent()                                 │   │
+│  │  - getAllStudents()                             │   │
+│  │  - getStudentById()                             │   │
+│  │  - updateStudent()                              │   │
+│  │  - deleteStudent()                              │   │
+│  │  - isRollNumberExists()                         │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────┘
+                         ↓ JDBC
+┌─────────────────────────────────────────────────────────┐
+│                  DATA ACCESS LAYER                      │
+│                                                          │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  DatabaseConfig                                │   │
+│  │  - Connection pooling setup                    │   │
+│  │  - Database initialization                     │   │
+│  │  - Auto-seeding sample data                    │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────┘
+                         ↓ SQL
+┌─────────────────────────────────────────────────────────┐
+│                   DATABASE LAYER                        │
+│                                                          │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  H2 Database (Embedded File-Based)              │   │
+│  │                                                 │   │
+│  │  students (table)                               │   │
+│  │  ├─ id (PK, Auto-increment)                    │   │
+│  │  ├─ name (VARCHAR)                              │   │
+│  │  ├─ email (VARCHAR)                             │   │
+│  │  ├─ roll_number (VARCHAR, UNIQUE)              │   │
+│  │  ├─ course (VARCHAR)                            │   │
+│  │  └─ grade (VARCHAR)                             │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────┘
+```
+
+
 
 ## Key Features
 - **Stat Dashboard**: Computes real-time statistics (Total Enrolled, Course Distribution, Grade average mapping, and student passing rates).

@@ -8,7 +8,7 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Database**: H2 Database Engine (embedded file-based SQL, persistence to `./student_db`), which requires zero setup or server installations.
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
 
-https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/main/Screenshot%202026-05-25%20153043.png?raw=true
+
 - ## Why I Built This Project
 
 Managing student records manually can become difficult, time-consuming, and prone to errors. I built this Student Management System to create a simple and efficient digital solution for storing and managing student information.

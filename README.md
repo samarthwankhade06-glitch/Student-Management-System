@@ -7,7 +7,7 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Backend**: Built using Java SE's built-in HTTP Server (`com.sun.net.httpserver.HttpServer`) to serve REST APIs and host frontend static files.
 - **Database**: H2 Database Engine (embedded file-based SQL, persistence to `./student_db`), which requires zero setup or server installations.
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
-
+ IMAGES OF WEBSITE
 https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/834e98fb4ccf51c4ff8ebe32c442499445f052b9/Screenshot%202026-05-25%20153043.png
 https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/8975dccffed0fdece0005c16ea06f9a0d5b0786d/Screenshot%202026-05-25%20153613.png
 https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/a7f83a4349cee6a04cc7b1ce51afcca9f83a630a/Screenshot%202026-05-25%20153914.png

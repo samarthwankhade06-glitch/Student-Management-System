@@ -9,6 +9,7 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
 
 https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/834e98fb4ccf51c4ff8ebe32c442499445f052b9/Screenshot%202026-05-25%20153043.png
+https://github.com/samarthwankhade06-glitch/Student-Management-System/blob/8975dccffed0fdece0005c16ea06f9a0d5b0786d/Screenshot%202026-05-25%20153613.png
 - ## Why I Built This Project
 
 Managing student records manually can become difficult, time-consuming, and prone to errors. I built this Student Management System to create a simple and efficient digital solution for storing and managing student information.

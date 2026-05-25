@@ -1,4 +1,4 @@
-# StudentHub - Student Management System (Java Full Stack)
+# StudentHub ACET- Student Management System (Java Full Stack)
 
 A lightweight, modern, and self-contained Student Management System built using a **Java Full Stack** architecture with **zero heavy frameworks** on the backend and **vanilla languages** on the frontend.
 
@@ -7,6 +7,26 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Backend**: Built using Java SE's built-in HTTP Server (`com.sun.net.httpserver.HttpServer`) to serve REST APIs and host frontend static files.
 - **Database**: H2 Database Engine (embedded file-based SQL, persistence to `./student_db`), which requires zero setup or server installations.
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
+- 
+- ## 📊 Project Stats at a Glance
+
+| Metric | Value |
+|--------|-------|
+| Architecture | Full-Stack (Java Backend + Vanilla JS Frontend) |
+| Backend Framework | Java HttpServer (built-in) |
+| Database | H2 Embedded |
+| API Type | REST (GET, POST, PUT, DELETE) |
+| Frontend Type | Single-Page Application (SPA) |
+| CRUD Operations | Full (Create, Read, Update, Delete) |
+| Real-time Features | ✅ Search, Filters, Charts, Stats |
+| Security Features | SQL Injection Prevention, XSS Protection, Path Traversal Prevention |
+| Theme Support | Dark/Light Mode with Persistence |
+| Design Patterns | MVC, DAO, Repository, Configuration |
+| Code Quality | Production-ready with error handling |
+| Recent Fixes | 3 (JSON parsing, Email validation, Theme sync) |
+
+---
+
 - ## 🏗️ System Architecture
 
 ```
@@ -78,18 +98,44 @@ A lightweight, modern, and self-contained Student Management System built using 
 │  └─────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
 ```
+## 🔑 Key Features Breakdown
+
+### 1. Dashboard (Real-Time Statistics)
+- **Total Enrolled:** Count of all students
+- **Average Grade:** Weighted GPA calculation
+- **Top Course:** Most popular course
+- **Passing Rate:** Percentage of students not failing
+
+### 2. Student Registry (CRUD Operations)
+- **Add Student:** Form validation + database insert
+- **Edit Student:** Update existing records
+- **Delete Student:** Remove with confirmation
+- **View All:** Paginated table view
+
+### 3. Search & Filtering
+- **Full-text Search:** Name, Roll, Email, Course
+- **Course Filter:** Dropdown by course
+- **Grade Filter:** Dropdown by grade
+- **Live Updates:** Instant results
+
+### 4. Analytics (Visual Reports)
+- **Course Distribution:** Doughnut chart
+- **Grade Distribution:** Bar chart
+- **GPA by Course:** Line chart
+
+### 5. Settings
+- **Admin Profile:** Name and role customization
+- **Theme Toggle:** Dark ↔ Light mode
+- **Page Size:** Control table pagination
+- **Database Reset:** Restore sample data
+
+---
 
 
 
-## Key Features
-- **Stat Dashboard**: Computes real-time statistics (Total Enrolled, Course Distribution, Grade average mapping, and student passing rates).
-- **Interactive Registry Table**: Responsive data grid with custom badges indicating grade ranks.
-- **Real-time Live Filters**: Full-text searching and dynamic category filters (by Course and by Grade).
-- **Form Validations**: Advanced client-side form checking (regex checks for emails, empty checks) and backend constraint validation (uniqueness check on Roll Number).
-- **Theme Engine**: Seamless toggle between sleek dark mode and warm light mode with browser persistent storage.
-- **Toast Notifications**: Interactive status notifications on successful record insertions, updates, and errors.
 
-## Project Structure
+
+##📁 Project Structure
 ```
 ├── lib/                   # Holds downloaded H2 Database Driver JAR
 ├── src/                   # Backend Java source files
@@ -105,22 +151,59 @@ A lightweight, modern, and self-contained Student Management System built using 
 │   └── app.js             # State manager and AJAX fetch handlers
 └── run.ps1                # PowerShell wrapper to compile and run
 ```
+## 📚 Technologies Used
 
-## Running the Project
-The project contains an automated PowerShell script (`run.ps1`) to boot the application in seconds on Windows.
+### Backend
+- **Java 11+** - Main language
+- **com.sun.net.httpserver** - HTTP server (JDK built-in)
+- **JDBC** - Database connectivity
+- **H2 Database** - Embedded SQL database
 
-### Steps:
-1. Open PowerShell in the project directory.
-2. Run the script:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\run.ps1
-   ```
-3. The script will:
-   - Create directories if they do not exist.
-   - Automatically download the H2 Database Driver jar from Maven Central.
-   - Compile all Java files into the `bin/` folder.
-   - Launch the server at **`http://localhost:8080`**.
-4. Open your web browser and go to: **[http://localhost:8080](http://localhost:8080)**
+### Frontend
+- **HTML5** - Markup
+- **CSS3** - Styling with variables & animations
+- **JavaScript ES6+** - Interactivity
+- **Chart.js** - Charts library (CDN)
+- **FontAwesome** - Icons (CDN)
+- **Google Fonts** - Typography
 
-## Database Customization
-By default, the backend will auto-seed sample student data into H2 if the registry is completely empty. The data is stored locally in the file `student_db.mv.db` in this folder, ensuring your additions and edits are saved across server restarts.
+### Tools
+- **PowerShell** - Build automation script
+- **Maven Central** - Dependency download
+
+---
+
+## How to Run the Project
+
+### Prerequisites
+- Java JDK installed
+- VS Code or IntelliJ IDEA
+
+### Steps to Run
+
+1. Clone the repository:
+
+git clone https://github.com/samarthwankhade06-glitch/Student-Management-System.git
+
+2. Open the project in VS Code
+
+3. Open Terminal
+
+4. Run:
+
+.\run.ps1
+
+OR
+
+run.bat
+
+5. Wait until you see:
+
+Backend Server successfully started!
+Server running at http://localhost:8082
+
+6. Open your browser and visit:
+
+http://localhost:8082
+
+

@@ -7,7 +7,23 @@ A lightweight, modern, and self-contained Student Management System built using 
 - **Backend**: Built using Java SE's built-in HTTP Server (`com.sun.net.httpserver.HttpServer`) to serve REST APIs and host frontend static files.
 - **Database**: H2 Database Engine (embedded file-based SQL, persistence to `./student_db`), which requires zero setup or server installations.
 - **Database Connectivity**: Java Database Connectivity (JDBC) for executing CRUD queries.
-- 
+
+- ## Why I Built This Project
+
+Managing student records manually can become difficult, time-consuming, and prone to errors. I built this Student Management System to create a simple and efficient digital solution for storing and managing student information.
+
+This project was more than just a CRUD application—it was an opportunity to understand how real-world systems connect frontend interfaces, backend logic, and databases together.
+
+Through this project, I explored:
+
+🚀 Building a complete full-stack application  
+💻 Backend development using Java and JDBC  
+🗄️ Database design and connectivity  
+🔄 Real-time Create, Read, Update, Delete operations  
+🌐 Integrating HTML, CSS, and JavaScript with Java backend  
+📚 Understanding how student information systems work in real environments  
+
+This project strengthened my practical development skills and helped me move from writing small programs to building an application with real-world use cases.
 - ## 📊 Project Stats at a Glance
 
 | Metric | Value |
